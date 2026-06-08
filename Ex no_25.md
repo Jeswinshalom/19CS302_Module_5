@@ -1,5 +1,5 @@
 
-# EX 25 C program to check whether a given character is a vowel or consonant using pointer
+# EX 25 C program to find character 'V' is vowel or consonant using pointer.
 ## DATE: 
 ## AIM:
 To write a C program to check whether a given character is a vowel or consonant using pointer
@@ -14,33 +14,27 @@ To write a C program to check whether a given character is a vowel or consonant 
 
 ## Program:
 ```
-#include <stdio.h>
-int main() {
- char str[100];
- char *p;
- int vowels = 0, consonants = 0;
- scanf(" %[^\n]", str);
- p = str;
- while (*p != '\0') {
- if ((*p >= 'A' && *p <= 'Z') || (*p >= 'a' && *p <= 'z')) {
- char ch = (*p >= 'A' && *p <= 'Z') ? *p + 32 : *p;
- if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
- vowels++;
- } else {
- consonants++;
- }
- }
- p++;
- }
- printf("Vowels: %d\n", vowels);
- printf("Consonants: %d\n", consonants);
- return 0;
+#include<stdio.h>
+int main()
+{
+  char c, *pc;
+  pc= &c;
+  scanf("%c", pc);
+
+  if( (*pc=='A'||*pc=='E'||*pc=='I'||*pc=='O'||*pc=='U') ||
+      (*pc=='a'||*pc=='e'||*pc=='i'||*pc=='o'||*pc=='u') )
+    printf("%c is Vowel.\n", *pc);
+
+  else
+    printf("%c is consonant.\n", *pc);
+
+  return 0;
 }
 ```
 
 ## Output:
 
-![image](https://github.com/user-attachments/assets/f784ea10-37a2-4f06-bd6a-94360113d1db)
+<img width="1140" height="200" alt="image" src="https://github.com/user-attachments/assets/e2c30ff7-a2d2-4abe-852e-f8fdb50dbd5c" />
 
 
 ## Result:
