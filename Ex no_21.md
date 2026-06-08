@@ -1,8 +1,7 @@
 
-# EX 21 C program to calculate the area of a triangle using pointer.
+# EX 21 Write a program to calculate area of a circle using pointer.
 ## AIM:
-To write a C program to calculate the area of a triangle using pointer.
-
+To write a program to calculate area of a circle using pointer.
 ## Algorithm
 1. Start.
 2. Declare three variable value of type float.
@@ -14,20 +13,24 @@ To write a C program to calculate the area of a triangle using pointer.
 ## Program:
 ```
 #include <stdio.h>
+#define PI 3.14
+
 int main() {
- float base, height, area;
- float *pBase = &base, *pHeight = &height;
- scanf("%f", pBase);
- scanf("%f", pHeight);
- area = 0.5 * (*pBase) * (*pHeight);
- printf("%.2f\n", area);
+    float radius, area;
+    float *ptrRadius, *ptrArea;
+    ptrRadius = &radius;
+    ptrArea = &area;
+    scanf("%f", ptrRadius);
+    *ptrArea = PI * (*ptrRadius) * (*ptrRadius);
+    printf("Area of Circle : %f\n", *ptrArea);
+    return 0;
 }
 
 ```
 
 ## Output:
 
-![Screenshot 2025-04-30 154838](https://github.com/user-attachments/assets/61464af2-29b1-49a6-be06-80db54e3ef59)
+<img width="1133" height="202" alt="image" src="https://github.com/user-attachments/assets/8c5b6cfc-26ef-470e-8229-153bbac88aa3" />
 
 
 ## Result:
